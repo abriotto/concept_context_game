@@ -40,13 +40,15 @@ If you would like to save the results (interaction file, agent checkpoints, a fi
 
 `--save True`
 
-the granularity of the context can be maniplauted
+the granularity of the context can be maniplauted by using the granularity command line argument, which can take the values 'coarse', 'mixed', and 'fine', e.g.
+
+`--granularity 'coarse'`
 
 ## Evaluation
 
-Our results can be found in 'results/'. The subfolders contain the metrics for each run. We stored the final interaction for each run which logs all game-relevant information such as sender input, messages, receiver input, and receiver selections for the training and validation set. Based on these interactions, we evaluated additional metrics after training using the notebook 'evaluate_metrics.ipynb'. We uploaded all metrics but not the interaction files due to their large size.
+Our results can be found in 'results/'. The subfolders contain the metrics for each run. Two subfolders are created to store the results of fine and coarse context conditions. We stored the final interaction for each run which logs all game-relevant information such as sender input, messages, receiver input, and receiver selections for the training and validation set. Based on these interactions, we evaluated additional metrics after training using the notebook 'evaluate_metrics.ipynb'. We uploaded all metrics but not the interaction files due to their large size.
 
 ## Visualization
 
-Visualizations of training and results can be found in the notebooks 'analysis.ipynb' and 'analysis_qualitative.ipynb'. The former reports all results for the 6 different data sets (D(3,4), D(3,8), D(3,16), D(4,4), D(4,8), D(5,4)). The latter contains code to extract message-concept pairs from the interactions and evaluate qualitatively which messages have been produced to refer to which concept in which context condition.
+Visualizations of training and results can be found in the notebooks 'analysis.ipynb' and 'analysis_qualitative.ipynb'. The former reports all results for the 6 different data sets (D(3,4), D(3,8), D(3,16), D(4,4), D(4,8), D(5,4)). The latter contains the code to create the lexica for the coarse and fine context conditions and some visualisations.
 
