@@ -16,31 +16,23 @@ library(tidyverse)
 # NMI----------------------------
 
 df_NMI <- df %>% 
-  filter(entropy_scores == 'NMI')
+  filter(entropy_score == 'NMI')
 
 df_NMI_fine <- df_NMI %>% 
   filter(condition == 'fine')
 
-agg_NMI_fine <- df_NMI_fine %>%
-  summarize(mean = mean(value),
-            sd = sd(value))
-
 df_NMI_mixed <- df_NMI %>% 
   filter(condition == 'mixed')
-
-agg_NMI_mixed <- df_NMI_mixed %>%
-  summarize(mean = mean(value),
-            sd = sd(value))
 
 df_NMI_coarse <- df_NMI %>% 
   filter(condition == 'coarse')
 
-agg_NMI_coarse <- df_NMI_coarse %>%
+agg_NMI <- df_NMI %>% 
   summarize(mean = mean(value),
             sd = sd(value))
 
-grand_mean <- (agg_NMI_fine$mean + agg_NMI_mixed$mean + agg_NMI_coarse$mean)/3
-grand_sd <- (agg_NMI_fine$sd + agg_NMI_mixed$sd + agg_NMI_coarse$sd)/3
+grand_mean <- agg_NMI$mean
+grand_sd <- agg_NMI$sd
 
 # calculate a region of practical equivalence with zero according to recommendation by Kruschke (2018)
 rope <- c(-0.1*grand_sd, 0.1*grand_sd)
@@ -66,7 +58,7 @@ plot(BEST_NMI_fine,ROPE=rope)
 summary(BEST_NMI_fine)
 # CrI does not include 0
 # 100% probability that the difference in means is larger than 0 (pd)
-# 0% in ROPE
+# 1% in ROPE
 
 Diff_coarse <- (BEST_NMI_coarse$mu1 - BEST_NMI_coarse$mu2)
 meanDiff_coarse <- round(mean(Diff_coarse), 3)
@@ -87,31 +79,23 @@ save(BEST_NMI_coarse,file="BEST_NMI_coarse.Rda")
 # effectiveness----------------------------
 
 df_effectiveness <- df %>% 
-  filter(entropy_scores == 'effectiveness')
+  filter(entropy_score == 'effectiveness')
 
 df_eff_fine <- df_effectiveness %>% 
   filter(condition == 'fine')
 
-agg_eff_fine <- df_eff_fine %>%
-  summarize(mean = mean(value),
-            sd = sd(value))
-
 df_eff_mixed <- df_effectiveness %>% 
   filter(condition == 'mixed')
-
-agg_eff_mixed <- df_eff_mixed %>%
-  summarize(mean = mean(value),
-            sd = sd(value))
 
 df_eff_coarse <- df_effectiveness %>% 
   filter(condition == 'coarse')
 
-agg_eff_coarse <- df_eff_coarse %>%
+agg_effectiveness <- df_effectiveness %>%
   summarize(mean = mean(value),
             sd = sd(value))
 
-grand_mean <- (agg_eff_fine$mean + agg_eff_mixed$mean + agg_eff_coarse$mean)/3
-grand_sd <- (agg_eff_fine$sd + agg_eff_mixed$sd + agg_eff_coarse$sd)/3
+grand_mean <- agg_effectiveness$mean
+grand_sd <- agg_effectiveness$sd
 
 # calculate a region of practical equivalence with zero according to recommendation by Kruschke (2018)
 rope <- c(-0.1*grand_sd, 0.1*grand_sd)
@@ -136,8 +120,8 @@ plotAll(BEST_eff_fine)
 plot(BEST_eff_fine,ROPE=rope)
 summary(BEST_eff_fine)
 # CrI includes 0
-# 85.1% probability that the difference in means is larger than 0 (pd)
-# 15% in ROPE
+# 85% probability that the difference in means is larger than 0 (pd)
+# 46% in ROPE
 
 Diff_coarse <- (BEST_eff_coarse$mu1 - BEST_eff_coarse$mu2)
 meanDiff_coarse <- round(mean(Diff_coarse), 3)
@@ -158,31 +142,23 @@ save(BEST_eff_coarse,file="BEST_eff_coarse.Rda")
 # consistency----------------------------
 
 df_consistency <- df %>% 
-  filter(entropy_scores == 'consistency')
+  filter(entropy_score == 'consistency')
 
 df_cons_fine <- df_consistency %>% 
   filter(condition == 'fine')
 
-agg_cons_fine <- df_cons_fine %>%
-  summarize(mean = mean(value),
-            sd = sd(value))
-
 df_cons_mixed <- df_consistency %>% 
   filter(condition == 'mixed')
-
-agg_cons_mixed <- df_cons_mixed %>%
-  summarize(mean = mean(value),
-            sd = sd(value))
 
 df_cons_coarse <- df_consistency %>% 
   filter(condition == 'coarse')
 
-agg_cons_coarse <- df_cons_coarse %>%
+agg_consistency <- df_consistency %>% 
   summarize(mean = mean(value),
             sd = sd(value))
 
-grand_mean <- (agg_cons_fine$mean + agg_cons_mixed$mean + agg_cons_coarse$mean)/3
-grand_sd <- (agg_cons_fine$sd + agg_cons_mixed$sd + agg_cons_coarse$sd)/3
+grand_mean <- agg_consistency$mean
+grand_sd <- agg_consistency$sd
 
 # calculate a region of practical equivalence with zero according to recommendation by Kruschke (2018)
 rope <- c(-0.1*grand_sd, 0.1*grand_sd)

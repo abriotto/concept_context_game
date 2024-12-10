@@ -1,5 +1,7 @@
 # context-granularity
 
+We build on [context-shapes-language](https://github.com/kristinakobrock/context-shapes-language).
+This is an implementation of a concept-level reference game in a language emergence paradigm using [EGG](https://github.com/facebookresearch/EGG/tree/main). The implementation builds on the [hierarchical reference game](https://github.com/XeniaOhmer/hierarchical_reference_game/tree/master) by Ohmer et al. (2022) and the [concept game](https://github.com/jayelm/emergent-generalization/tree/master) by Mu & Goodman (2021).
 
 ## Installing dependencies
 We used Python 3.9.15 and PyTorch 1.13.0. Generally, the minimal requirements are Python 3.6 and PyTorch 1.1.0.
@@ -48,6 +50,3 @@ Our results can be found in 'results/'. The subfolders contain the metrics for e
 
 Visualizations of training and results can be found in the notebooks 'analysis.ipynb' and 'analysis_qualitative.ipynb'. The former reports all results for the 6 different data sets (D(3,4), D(3,8), D(3,16), D(4,4), D(4,8), D(5,4)). The latter contains code to extract message-concept pairs from the interactions and evaluate qualitatively which messages have been produced to refer to which concept in which context condition.
 
-## Grid search results
-
-The folder 'grid_search/' contains the results for the hyperparameter grid search. 'grid_search_length_cost/' contains the results for the length cost parameter search (also given different message lengths).
