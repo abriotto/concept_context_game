@@ -1,4 +1,5 @@
-# code based on https://github.com/XeniaOhmer/hierarchical_reference_game/blob/master/train.py
+# copied and adapted from https://github.com/kristinakobrock/context-shapes-language
+# who based on https://github.com/XeniaOhmer/hierarchical_reference_game/blob/master/train.py
 # and https://github.com/jayelm/emergent-generalization/blob/master/code/train.py
 
 import argparse

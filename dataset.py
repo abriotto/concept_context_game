@@ -1,4 +1,5 @@
-# code inspired by https://github.com/XeniaOhmer/hierarchical_reference_game/blob/master/dataset.py
+# code inspired by https://github.com/XeniaOhmer/hierarchical_reference_game/blob/master/dataset
+# and https://github.com/kristinakobrock/context-shapes-language
 
 import torch
 import torch.nn.functional as F

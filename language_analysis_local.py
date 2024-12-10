@@ -1,4 +1,5 @@
-# copied and adapted from https://github.com/XeniaOhmer/hierarchical_reference_game/blob/master/language_analysis_local.py
+#copied from https://github.com/kristinakobrock/context-shapes-language
+# who copied and adapted from https://github.com/XeniaOhmer/hierarchical_reference_game/blob/master/language_analysis_local.py
 # and https://github.com/jayelm/emergent-generalization/blob/master/code/emergence.py
 # who both based on https://github.com/facebookresearch/EGG/blob/main/egg/core/language_analysis.py
 

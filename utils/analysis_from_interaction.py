@@ -1,4 +1,5 @@
-# copied and adapted from https://github.com/XeniaOhmer/hierarchical_reference_game/blob/master/utils/analysis_from_interaction.py
+# copied and adapted from https://github.com/kristinakobrock/context-shapes-language
+# who based on https://github.com/XeniaOhmer/hierarchical_reference_game/blob/master/utils/analysis_from_interaction.py
 
 from egg.core.language_analysis import calc_entropy, _hashable_tensor, Disent
 from sklearn.metrics import normalized_mutual_info_score

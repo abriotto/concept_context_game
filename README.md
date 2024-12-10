@@ -1,7 +1,5 @@
-# emergent-abstractions
+# context-granularity
 
-Implementation of a concept-level reference game in a language emergence paradigm using [EGG](https://github.com/facebookresearch/EGG/tree/main). The implementation builds on the [hierarchical reference game](https://github.com/XeniaOhmer/hierarchical_reference_game/tree/master) by Ohmer et al. (2022) and the [concept game](https://github.com/jayelm/emergent-generalization/tree/master) by Mu & Goodman (2021). A first abstract of this research has been published at the workshop 'Procedural and computational models of semantic and pragmatic processes' held at the 34th European Summer School in Logic, Language and Information (ESSLLI) at University of Ljubljana, Faculty of Computer and Information Science from 31 July – 4 August 2023: Kristina Kobrock, Xenia Ohmer, Elia Bruni and Nicole Gotzner (2023): [Pragmatics in referential communication: An investigation of concept
-communication and the role of pragmatics with an emergent communication game](https://prosandcomps.github.io/assets/pdf/abstracts/ProsComps2023_Kobrock.pdf).
 
 ## Installing dependencies
 We used Python 3.9.15 and PyTorch 1.13.0. Generally, the minimal requirements are Python 3.6 and PyTorch 1.1.0.
@@ -39,6 +37,8 @@ Per default, this conducts one run. If you would like to change the number of ru
 If you would like to save the results (interaction file, agent checkpoints, a file storing all hyperparameter values, training and validation accuracies over time, plus test accuracy for generalization to novel objects) you can add the flag
 
 `--save True`
+
+the granularity of the context can be maniplauted
 
 ## Evaluation
 
