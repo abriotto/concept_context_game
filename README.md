@@ -1,6 +1,6 @@
 # emergent-abstractions
 
-We build on [Kobrock et al. (2024): Context Shapes Emergent Communication about Concepts at Different Levels of Abstraction (LREC-COLING)](https://github.com/kristinakobrock/context-shapes-language).
+We build on [context-shapes-language](https://github.com/kristinakobrock/context-shapes-language).
 This is an implementation of a concept-level reference game in a language emergence paradigm using [EGG](https://github.com/facebookresearch/EGG/tree/main). The implementation builds on the [hierarchical reference game](https://github.com/XeniaOhmer/hierarchical_reference_game/tree/master) by Ohmer et al. (2022) and the [concept game](https://github.com/jayelm/emergent-generalization/tree/master) by Mu & Goodman (2021).
 
 ## Installing dependencies
