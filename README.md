@@ -1,7 +1,7 @@
 # emergent-abstractions
 
-Implementation of a concept-level reference game in a language emergence paradigm using [EGG](https://github.com/facebookresearch/EGG/tree/main). The implementation builds on the [hierarchical reference game](https://github.com/XeniaOhmer/hierarchical_reference_game/tree/master) by Ohmer et al. (2022) and the [concept game](https://github.com/jayelm/emergent-generalization/tree/master) by Mu & Goodman (2021). A first abstract of this research has been published at the workshop 'Procedural and computational models of semantic and pragmatic processes' held at the 34th European Summer School in Logic, Language and Information (ESSLLI) at University of Ljubljana, Faculty of Computer and Information Science from 31 July – 4 August 2023: Kristina Kobrock, Xenia Ohmer, Elia Bruni and Nicole Gotzner (2023): [Pragmatics in referential communication: An investigation of concept
-communication and the role of pragmatics with an emergent communication game](https://prosandcomps.github.io/assets/pdf/abstracts/ProsComps2023_Kobrock.pdf).
+We build on [Kobrock et al. (2024): Context Shapes Emergent Communication about Concepts at Different Levels of Abstraction (LREC-COLING)](https://github.com/kristinakobrock/context-shapes-language).
+This is an implementation of a concept-level reference game in a language emergence paradigm using [EGG](https://github.com/facebookresearch/EGG/tree/main). The implementation builds on the [hierarchical reference game](https://github.com/XeniaOhmer/hierarchical_reference_game/tree/master) by Ohmer et al. (2022) and the [concept game](https://github.com/jayelm/emergent-generalization/tree/master) by Mu & Goodman (2021).
 
 ## Installing dependencies
 We used Python 3.9.15 and PyTorch 1.13.0. Generally, the minimal requirements are Python 3.6 and PyTorch 1.1.0.
@@ -48,6 +48,3 @@ Our results can be found in 'results/'. The subfolders contain the metrics for e
 
 Visualizations of training and results can be found in the notebooks 'analysis.ipynb' and 'analysis_qualitative.ipynb'. The former reports all results for the 6 different data sets (D(3,4), D(3,8), D(3,16), D(4,4), D(4,8), D(5,4)). The latter contains code to extract message-concept pairs from the interactions and evaluate qualitatively which messages have been produced to refer to which concept in which context condition.
 
-## Grid search results
-
-The folder 'grid_search/' contains the results for the hyperparameter grid search. 'grid_search_length_cost/' contains the results for the length cost parameter search (also given different message lengths).
