@@ -42,7 +42,7 @@ If you would like to save the results (interaction file, agent checkpoints, a fi
 
 the granularity of the context can be maniplauted by using the granularity command line argument, which can take the values 'coarse', 'mixed', and 'fine', e.g.
 
-`--granularity 'coarse'`
+`--granularity coarse`
 
 ## Evaluation
 

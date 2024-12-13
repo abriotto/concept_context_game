@@ -115,6 +115,10 @@ class DataSet(torch.utils.data.Dataset):
 
 					elif self.granularity == "fine":
 						test.append(self.get_item(concept_idx, nr_possible_contexts-1 , self._many_hot_encoding, include_concept))
+					train.dimensions = self.properties_dim
+
+		print("Length of train and validation datasets:", len(train), "/", len(val))
+		print("Length of test dataset:", len(test))
 		
 
 		return train, val, test
